@@ -18,7 +18,7 @@ const routerAddChant = require('./routes/add-chant');
     app.use('', routerGetChants);
     app.use('', routerAddChant);
 
-    app.listen(3000, () => {
+    app.listen(process.env.PORT || 5000, () => {
         console.log('Сервер запущен');
     });
     if (err) {
