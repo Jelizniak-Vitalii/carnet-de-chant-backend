@@ -7,6 +7,7 @@ const db = 'mongodb+srv://test:test@cluster0.bjplj.mongodb.net/test';
 
 const routerGetChants = require('./routes/get-chants');
 const routerAddChant = require('./routes/add-chant');
+const routerGetChantsByName = require('./routes/get-chants-by-name')
 
     mongoose.connect(db,{
     useNewUrlParser: true,
@@ -17,6 +18,7 @@ const routerAddChant = require('./routes/add-chant');
     app.use(bodyParser.json());
     app.use('', routerGetChants);
     app.use('', routerAddChant);
+    app.use('', routerGetChantsByName);
 
     app.listen(process.env.PORT || 80, () => {
         console.log('Сервер запущен');

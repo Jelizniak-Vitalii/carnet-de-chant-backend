@@ -2,7 +2,7 @@ const routerAddChant = require('express').Router();
 
 const Chants = require('../models/chant.model');
 
-routerAddChant.post('/add_chant', (req, res) => {
+routerAddChant.post('/addChant', (req, res) => {
     const data = req.body;
 
     Chants.findOne({ chant_name: data.chant_name }, (err, chant) => {

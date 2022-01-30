@@ -3,10 +3,9 @@ const Schema = mongoose.Schema;
 
 const DataSchema = new Schema({
     id: '',
-    chant_name: '',
+    name: '',
     text: '',
-    audio: '',
-    audio_minus: ''
+    url: '',
 });
 
 module.exports = mongoose.model('Chants', DataSchema);
